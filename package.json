@@ -1,7 +1,6 @@
 {
   "name": "playground",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,11 @@
   "bugs": {
     "url": "https://github.com/evannoahrp/js_playground/issues"
   },
-  "homepage": "https://github.com/evannoahrp/js_playground#readme"
+  "homepage": "https://github.com/evannoahrp/js_playground#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "sequelize": "^6.17.0"
+  },
+  "keywords": [],
+  "description": ""
 }
