@@ -1,0 +1,236 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+/* Navbar */
+.navbar-scroll {
+  background-color: lightgray;
+  box-shadow: 0 2px 20px #c0c0c0;
+}
+
+.navbar-brand {
+  font-family: Viga;
+  font-size: 32px;
+  background-color: transparent;
+}
+
+#particles-js {
+  background-color: lightgray;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  padding-top: 4rem;
+}
+
+.jumbotron {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron .display-4 {
+  margin-top: 10px;
+}
+
+.lead {
+  font-family: Viga;
+  padding-left: 4px;
+}
+
+#about {
+  position: relative;
+  background-color: lightgray;
+}
+
+#resume {
+  position: relative;
+  background-color: lightgray;
+}
+
+#portfolio {
+  position: relative;
+  background-color: lightgray;
+}
+
+.card {
+  background-color: lightgray;
+}
+
+.card:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+#contact {
+  position: relative;
+  background-color: lightgray;
+}
+
+.xy {
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  padding: 20px;
+}
+
+.xyz {
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  padding: 20px;
+  cursor: pointer;
+
+  /* Set the transition effects */
+  -webkit-transition: -webkit-transform 0.8s;
+  -moz-transition: -moz-transform 0.8s;
+  -o-transition: -o-transform 0.8s;
+  transition: transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.xyz.flipped {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+.xyz .front,
+.xyz .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+a + a {
+  margin-left: 20px;
+}
+
+/* Desktop Ver */
+@media (min-width: 992px) {
+  canvas {
+    display: block;
+  }
+
+  .nav-link {
+    margin-right: 30px;
+    text-transform: uppercase;
+  }
+
+  .nav-link:hover::after {
+    border-bottom: 3px solid black;
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: -8px;
+    padding-bottom: 5px;
+    width: 30px;
+  }
+}
+
+.div-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  background: black;
+}
+
+.div-loader {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  filter: url(#gooey);
+  animation: animate 16s linear infinite;
+}
+
+.div-loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate(calc(45deg * var(--i)));
+}
+
+.div-loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #c7eeff, #03a9f4);
+  border-radius: 50%;
+  box-shadow: 0 0 6px #00bcd4;
+}
+
+.rotate {
+  animation: animate1 4s ease-in-out infinite;
+  animation-delay: calc(-0.2s * var(--j));
+}
+
+@keyframes animate1 {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    transform: rotate(360deg);
+  }
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+.div-loading {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.div-loading .blocks {
+  position: absolute;
+  width: 8px;
+  height: 25px;
+  background: #262626;
+  left: 50%;
+  border-radius: 8px;
+  transform: rotate(calc(18deg * var(--i)));
+  transform-origin: 0 120px;
+  animation: animate2 1.9s ease-in-out infinite;
+  animation-delay: calc(0.05s * var(--i));
+}
+
+@keyframes animate2 {
+  0%, 50% {
+    background: #262626;
+    box-shadow: none;
+  } 50.1%, 100% {
+    background: #03a9f4;
+    box-shadow: 0 0 5px #03a9f4,
+                0 0 15px #03a9f4,
+                0 0 30px #03a9f4,
+                0 0 60px #03a9f4,
+                0 0 90px #03a9f4;
+  }
+}
+
+#portfolio {
+  height: 100vh;
+}
