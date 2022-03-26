@@ -189,7 +189,7 @@ var temp2 = new obj("<div class=\"div-body\">" +
                         "<div class=\"blocks\" style=\"--i:20;\"></div>" +
                       "</div>" +
                     "</div>",
-                    "text");
+                    "Rotate Loader Animation");
 // var temp1 = new obj("/images/meme/1.jpg", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet modi exercitationem fugit necessitatibus omnis recusandae atque quisquam numquam. Pariatur reprehenderit laboriosam earum velit delectus ipsam!");
 // var temp2 = new obj("/images/meme/2.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores aperiam illo deleniti illum iure vero unde amet nemo, velit fuga magnam explicabo eveniet magni.");
 // var temp3 = new obj("/images/meme/3.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eligendi illo, illum ducimus debitis suscipit. Nihil, neque ullam. Nemo sapiente impedit ratione cum, quia debitis.");
