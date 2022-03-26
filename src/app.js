@@ -1,8 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var passport = require("passport");
+var LocalStrategy = require("passport-local").Strategy;
+var session = require("express-session");
+const bcrypt = require("bcrypt");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const PORT = process.env.PORT || 3000;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -36,6 +41,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`);
 });
 
 module.exports = app;

@@ -164,7 +164,7 @@ var temp1 = new obj("<div class=\"div-body\">" +
                       "</div>" + 
                     "</div>",
                     "Liquid Loader Animation");
-                    
+
 var temp2 = new obj("<div class=\"div-body\">" + 
                       "<div class=\"div-loading\">" +
                         "<div class=\"blocks\" style=\"--i:1;\"></div>" +
@@ -190,19 +190,11 @@ var temp2 = new obj("<div class=\"div-body\">" +
                       "</div>" +
                     "</div>",
                     "Rotate Loader Animation");
-// var temp1 = new obj("/images/meme/1.jpg", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet modi exercitationem fugit necessitatibus omnis recusandae atque quisquam numquam. Pariatur reprehenderit laboriosam earum velit delectus ipsam!");
-// var temp2 = new obj("/images/meme/2.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores aperiam illo deleniti illum iure vero unde amet nemo, velit fuga magnam explicabo eveniet magni.");
-// var temp3 = new obj("/images/meme/3.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eligendi illo, illum ducimus debitis suscipit. Nihil, neque ullam. Nemo sapiente impedit ratione cum, quia debitis.");
-// var temp4 = new obj("/images/meme/4.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa mollitia possimus dignissimos laborum a aut sit modi! Doloremque libero unde eligendi possimus saepe, esse quaerat.");
-// var temp5 = new obj("/images/meme/5.jpg", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam consequatur vitae consequuntur corrupti dignissimos. Alias est earum magni provident odit nostrum voluptate suscipit libero quod?");
-
-// var arr = [temp1, temp2, temp3, temp4, temp5];
 var arr = [temp1, temp2];
 
 $(document).ready(function () {
   $.each(arr, function (i) {
     var temp = `<div class="col-md-4 mb-4"><div class="card h-100">${arr[i].code}<div class="card-body"><p class="card-text"> ${arr[i].desc}</p></div></div></div>`;
-    // var temp = `<div class="col-md-4 mb-4"><div class="card h-100"><img src="${arr[i].code}" alt="..." /><div class="card-body"><p class="card-text"> ${arr[i].desc}</p></div></div></div>`;
     $("#kartuPortfolio").append(temp);
   });
 });

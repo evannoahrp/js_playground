@@ -230,3 +230,7 @@ svg {
                 0 0 90px #03a9f4;
   }
 }
+
+#portfolio {
+  height: 100vh;
+}
