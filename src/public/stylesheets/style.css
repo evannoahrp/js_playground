@@ -142,7 +142,7 @@ a + a {
   }
 }
 
-.section-loader {
+.div-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +152,6 @@ a + a {
 
 .div-loader {
   position: relative;
-  margin-top: -70px;
   width: 240px;
   height: 240px;
   filter: url(#gooey);
@@ -199,14 +198,6 @@ svg {
   height: 0;
 }
 
-.div-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 40vh;
-  background: black;
-}
-
 .div-loading {
   position: relative;
   width: 240px;
@@ -222,7 +213,7 @@ svg {
   border-radius: 8px;
   transform: rotate(calc(18deg * var(--i)));
   transform-origin: 0 120px;
-  animation: animate2 2s ease-in-out infinite;
+  animation: animate2 1.9s ease-in-out infinite;
   animation-delay: calc(0.05s * var(--i));
 }
 

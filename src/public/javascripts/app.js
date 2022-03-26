@@ -140,7 +140,7 @@ class obj {
   }
 }
 
-var temp1 = new obj("<section class=\"section-loader\">" + 
+var temp1 = new obj("<div class=\"div-body\">" + 
                       "<svg>" + 
                         "<filter id=\"gooey\">" +
                           "<feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\"/>"+
@@ -162,9 +162,9 @@ var temp1 = new obj("<section class=\"section-loader\">" +
                         "<span class=\"rotate\" style=\"--j:3;\"></span>" + 
                         "<span class=\"rotate\" style=\"--j:4;\"></span>" + 
                       "</div>" + 
-                    "</section>",
+                    "</div>",
                     "Liquid Loader Animation");
-
+                    
 var temp2 = new obj("<div class=\"div-body\">" + 
                       "<div class=\"div-loading\">" +
                         "<div class=\"blocks\" style=\"--i:1;\"></div>" +
