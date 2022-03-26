@@ -132,31 +132,52 @@ particlesJS(
   }
 );
 
-// card in portfolio
-class kartu {
-  constructor(gambar, deskripsi) {
-    this.gambar = gambar;
-    this.deskripsi = deskripsi;
+// object in portfolio
+class obj {
+  constructor(code, desc) {
+    this.code = code;
+    this.desc = desc;
   }
 }
 
-var gambar1 = new kartu(
-  "/images/meme/1.jpg",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet modi exercitationem fugit necessitatibus omnis recusandae atque quisquam numquam. Pariatur reprehenderit laboriosam earum velit delectus ipsam!"
-);
-var gambar2 = new kartu("/images/meme/2.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores aperiam illo deleniti illum iure vero unde amet nemo, velit fuga magnam explicabo eveniet magni.");
-var gambar3 = new kartu("/images/meme/3.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eligendi illo, illum ducimus debitis suscipit. Nihil, neque ullam. Nemo sapiente impedit ratione cum, quia debitis.");
-var gambar4 = new kartu("/images/meme/4.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa mollitia possimus dignissimos laborum a aut sit modi! Doloremque libero unde eligendi possimus saepe, esse quaerat.");
-var gambar5 = new kartu(
-  "/images/meme/5.jpg",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam consequatur vitae consequuntur corrupti dignissimos. Alias est earum magni provident odit nostrum voluptate suscipit libero quod?"
-);
+var temp1 = new obj("<section class=\"secloader\">" + 
+                      "<svg>" + 
+                        "<filter id=\"gooey\">" +
+                          "<feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\"/>"+
+                          "<feColorMatrix values=\"1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -10\"/>"+
+                        "</filter>" +
+                      "</svg>" + 
+                      "<div class=\"divloader\">" + 
+                        "<span style=\"--i:1;\"></span>" + 
+                        "<span style=\"--i:2;\"></span>" + 
+                        "<span style=\"--i:3;\"></span>" + 
+                        "<span style=\"--i:4;\"></span>" + 
+                        "<span style=\"--i:5;\"></span>" + 
+                        "<span style=\"--i:6;\"></span>" + 
+                        "<span style=\"--i:7;\"></span>" + 
+                        "<span style=\"--i:8;\"></span>" + 
+                        "<span class=\"rotate\" style=\"--j:0;\"></span>" + 
+                        "<span class=\"rotate\" style=\"--j:1;\"></span>" + 
+                        "<span class=\"rotate\" style=\"--j:2;\"></span>" + 
+                        "<span class=\"rotate\" style=\"--j:3;\"></span>" + 
+                        "<span class=\"rotate\" style=\"--j:4;\"></span>" + 
+                      "</div>" + 
+                    "</section>",
+                    "Liquid Loader Animation");
+var temp2 = new obj("under dev", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores aperiam illo deleniti illum iure vero unde amet nemo, velit fuga magnam explicabo eveniet magni.");
+// var temp1 = new obj("/images/meme/1.jpg", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet modi exercitationem fugit necessitatibus omnis recusandae atque quisquam numquam. Pariatur reprehenderit laboriosam earum velit delectus ipsam!");
+// var temp2 = new obj("/images/meme/2.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores aperiam illo deleniti illum iure vero unde amet nemo, velit fuga magnam explicabo eveniet magni.");
+// var temp3 = new obj("/images/meme/3.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eligendi illo, illum ducimus debitis suscipit. Nihil, neque ullam. Nemo sapiente impedit ratione cum, quia debitis.");
+// var temp4 = new obj("/images/meme/4.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa mollitia possimus dignissimos laborum a aut sit modi! Doloremque libero unde eligendi possimus saepe, esse quaerat.");
+// var temp5 = new obj("/images/meme/5.jpg", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam consequatur vitae consequuntur corrupti dignissimos. Alias est earum magni provident odit nostrum voluptate suscipit libero quod?");
 
-var arrGambar = [gambar1, gambar2, gambar3, gambar4, gambar5];
+// var arr = [temp1, temp2, temp3, temp4, temp5];
+var arr = [temp1, temp2];
 
 $(document).ready(function () {
-  $.each(arrGambar, function (i) {
-    var temp = `<div class="col-md-4 mb-4"><div class="card h-100"><img src="${arrGambar[i].gambar}" alt="..." /><div class="card-body"><p class="card-text"> ${arrGambar[i].deskripsi}</p></div></div></div>`;
+  $.each(arr, function (i) {
+    var temp = `<div class="col-md-4 mb-4"><div class="card h-100">${arr[i].code}<div class="card-body"><p class="card-text"> ${arr[i].desc}</p></div></div></div>`;
+    // var temp = `<div class="col-md-4 mb-4"><div class="card h-100"><img src="${arr[i].code}" alt="..." /><div class="card-body"><p class="card-text"> ${arr[i].desc}</p></div></div></div>`;
     $("#kartuPortfolio").append(temp);
   });
 });
