@@ -140,14 +140,14 @@ class obj {
   }
 }
 
-var temp1 = new obj("<section class=\"secloader\">" + 
+var temp1 = new obj("<section class=\"section-loader\">" + 
                       "<svg>" + 
                         "<filter id=\"gooey\">" +
                           "<feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\"/>"+
                           "<feColorMatrix values=\"1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -10\"/>"+
                         "</filter>" +
                       "</svg>" + 
-                      "<div class=\"divloader\">" + 
+                      "<div class=\"div-loader\">" + 
                         "<span style=\"--i:1;\"></span>" + 
                         "<span style=\"--i:2;\"></span>" + 
                         "<span style=\"--i:3;\"></span>" + 
@@ -164,7 +164,32 @@ var temp1 = new obj("<section class=\"secloader\">" +
                       "</div>" + 
                     "</section>",
                     "Liquid Loader Animation");
-var temp2 = new obj("under dev", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores aperiam illo deleniti illum iure vero unde amet nemo, velit fuga magnam explicabo eveniet magni.");
+
+var temp2 = new obj("<div class=\"div-body\">" + 
+                      "<div class=\"div-loading\">" +
+                        "<div class=\"blocks\" style=\"--i:1;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:2;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:3;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:4;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:5;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:6;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:7;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:8;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:9;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:10;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:11;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:12;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:13;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:14;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:15;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:16;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:17;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:18;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:19;\"></div>" +
+                        "<div class=\"blocks\" style=\"--i:20;\"></div>" +
+                      "</div>" +
+                    "</div>",
+                    "text");
 // var temp1 = new obj("/images/meme/1.jpg", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet modi exercitationem fugit necessitatibus omnis recusandae atque quisquam numquam. Pariatur reprehenderit laboriosam earum velit delectus ipsam!");
 // var temp2 = new obj("/images/meme/2.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur asperiores aperiam illo deleniti illum iure vero unde amet nemo, velit fuga magnam explicabo eveniet magni.");
 // var temp3 = new obj("/images/meme/3.jpg", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eligendi illo, illum ducimus debitis suscipit. Nihil, neque ullam. Nemo sapiente impedit ratione cum, quia debitis.");

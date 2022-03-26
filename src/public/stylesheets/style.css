@@ -142,24 +142,24 @@ a + a {
   }
 }
 
-.secloader {
+.section-loader {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 40vh;
-  background: #0c1b21;
+  background: black;
 }
 
-.divloader {
+.div-loader {
   position: relative;
-  margin-top: -60px;
-  width: 200px;
-  height: 200px;
+  margin-top: -70px;
+  width: 240px;
+  height: 240px;
   filter: url(#gooey);
   animation: animate 16s linear infinite;
 }
 
-.divloader span {
+.div-loader span {
   position: absolute;
   top: 0;
   left: 0;
@@ -169,28 +169,27 @@ a + a {
   transform: rotate(calc(45deg * var(--i)));
 }
 
-.divloader span::before {
+.div-loader span::before {
   content: '';
   position: absolute;
   top: 0;
-  left: calc(50% - 20px);
-  width: 40px;
-  height: 40px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
   background: linear-gradient(45deg, #c7eeff, #03a9f4);
   border-radius: 50%;
   box-shadow: 0 0 6px #00bcd4;
 }
 
 .rotate {
-  animation: animate 4s ease-in-out infinite;
+  animation: animate1 4s ease-in-out infinite;
   animation-delay: calc(-0.2s * var(--j));
 }
 
-@keyframes animate {
+@keyframes animate1 {
   0% {
     transform: rotate(0deg);
-  }
-  100% {
+  } 100% {
     transform: rotate(360deg);
   }
 }
@@ -198,4 +197,45 @@ a + a {
 svg {
   width: 0;
   height: 0;
+}
+
+.div-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  background: black;
+}
+
+.div-loading {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.div-loading .blocks {
+  position: absolute;
+  width: 8px;
+  height: 25px;
+  background: #262626;
+  left: 50%;
+  border-radius: 8px;
+  transform: rotate(calc(18deg * var(--i)));
+  transform-origin: 0 120px;
+  animation: animate2 2s ease-in-out infinite;
+  animation-delay: calc(0.05s * var(--i));
+}
+
+@keyframes animate2 {
+  0%, 50% {
+    background: #262626;
+    box-shadow: none;
+  } 50.1%, 100% {
+    background: #03a9f4;
+    box-shadow: 0 0 5px #03a9f4,
+                0 0 15px #03a9f4,
+                0 0 30px #03a9f4,
+                0 0 60px #03a9f4,
+                0 0 90px #03a9f4;
+  }
 }
