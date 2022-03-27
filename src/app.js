@@ -1,17 +1,36 @@
-var createError = require('http-errors')
-var express = require('express')
-var path = require('path')
-var passport = require('passport')
-var LocalStrategy = require('passport-local').Strategy
-var session = require('express-session')
 const bcrypt = require('bcrypt')
-var cookieParser = require('cookie-parser')
-var logger = require('morgan')
+const cookieParser = require('cookie-parser')
+const createError = require('http-errors')
+const express = require('express')
+const flash = require('express-flash')
+const localStrategy = require('passport-local').Strategy
+const logger = require('morgan')
+const path = require('path')
+const passport = require('./lib/passport')
+const session = require('express-session')
+
+const app = express()
+
 const PORT = process.env.PORT || 3000
 
-var router = require('./routes/router')
+app.use(express.urlencoded({ extended: false }))
 
-var app = express()
+app.use(
+  session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: false,
+  }),
+)
+
+app.use(passport.initialize())
+
+app.use(passport.session())
+
+app.use(flash())
+
+var router = require('./routes/router')
+var exp = require('constants')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
