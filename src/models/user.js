@@ -1,7 +1,7 @@
 'use strict'
 const { Model } = require('sequelize')
 const bcrypt = require('bcrypt')
-// const jsonwebtoken = require('jsonwebtoken')
+const jsonwebtoken = require('jsonwebtoken')
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
@@ -23,15 +23,16 @@ module.exports = (sequelize, DataTypes) => {
 
     checkPassword = (password) => bcrypt.compareSync(password, this.password)
 
-    // generateToken = () => {
-    //   const payload = {
-    //     id: this.id,
-    //     username: this.username,
-    //   }
-    //   const secret = 'Secret'
-    //   const token = jsonwebtoken.sign(payload, secret)
-    //   return token
-    // }
+    generateToken = () => {
+      const payload = {
+        id: this.id,
+        username: this.username,
+      }
+      const secret = 'Secret'
+      const token = jsonwebtoken.sign(payload, secret)
+      return token
+    }
+    
     static authenticate = async ({ username, password }) => {
       try {
         const user = await this.findOne({ where: { username } })

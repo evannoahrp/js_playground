@@ -1,5 +1,5 @@
 const { User } = require('../models')
-const passport = require('../lib/passport')
+// const passport = require('../lib/passport')
 
 function format(user) {
   const { id, username } = user
@@ -32,9 +32,15 @@ module.exports = {
     res.render('login', { title: 'Login' })
   },
 
-  login: passport.authenticate('local', {
-    successRedirect: '/v1/api/crud/',
-    failureRedirect: '/v1/api/auth/login',
-    failureFlash: true,
-  }),
+  // login: passport.authenticate('local', {
+  //   successRedirect: '/v1/api/crud/',
+  //   failureRedirect: '/v1/api/auth/login',
+  //   failureFlash: true,
+  // }),
+
+  login: (req, res) => {
+    User.authenticate(req.body).then((user) => {
+      res.json(format(user))
+    })
+  },
 }

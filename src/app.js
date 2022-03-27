@@ -7,6 +7,7 @@ const localStrategy = require('passport-local').Strategy
 const logger = require('morgan')
 const path = require('path')
 const passport = require('./lib/passport')
+const router = require('./routes/router')
 const session = require('express-session')
 
 const app = express()
@@ -28,9 +29,6 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
-
-var router = require('./routes/router')
-var exp = require('constants')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
